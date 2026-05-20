@@ -301,6 +301,14 @@ nav {
 .doctor-frame {
   position: relative;
 }
+.doctor-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 .doctor-portrait {
   width: 100%; aspect-ratio: 3/4;
   background: var(--black-card);
