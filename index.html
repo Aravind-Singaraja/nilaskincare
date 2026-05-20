@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctors Cosmetic Clinic Chennai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black:       #0A0A0A;
+  --black-rich:  #111111;
+  --black-soft:  #1A1A1A;
+  --black-card:  #161616;
+  --gold:        #C9A84C;
+  --gold-light:  #E8C97A;
+  --gold-bright: #F0D685;
+  --gold-dark:   #9A7A2E;
+  --gold-dim:    #5A4A1E;
+  --white:       #FFFFFF;
+  --white-off:   #F8F8F6;
+  --white-dim:   rgba(255,255,255,0.75);
+  --white-muted: rgba(255,255,255,0.45);
+  --white-faint: rgba(255,255,255,0.12);
+  --gold-glow:   rgba(201,168,76,0.15);
+  --gold-border: rgba(201,168,76,0.3);
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'Montserrat', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ─── GOLD SHIMMER ANIMATION ─── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.gold-text {
+  background: linear-gradient(90deg, var(--gold-dark) 0%, var(--gold-bright) 40%, var(--gold) 60%, var(--gold-light) 80%, var(--gold-dark) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5rem;
+  height: 80px;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--gold-border);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 1rem;
+  text-decoration: none;
+}
+.nav-logo-img {
+  height: 52px; width: auto;
+  filter: drop-shadow(0 0 8px rgba(201,168,76,0.4));
+}
+.nav-links {
+  display: flex; gap: 0; list-style: none; align-items: center;
+}
+.nav-links a {
+  text-decoration: none; font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--white-muted); padding: 0 1.4rem;
+  transition: color 0.25s; display: block;
+}
+.nav-links a:hover { color: var(--gold-light); }
+.nav-book {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  padding: 0.6rem 1.6rem !important;
+  letter-spacing: 0.15em !important;
+  transition: all 0.3s !important;
+}
+.nav-book:hover {
+  background: var(--gold) !important;
+  color: var(--black) !important;
+}
+
+/* ─── HERO ─── */
+#hero {
+  min-height: 100vh; position: relative;
+  display: flex; align-items: center;
+  background: var(--black-rich);
+  overflow: hidden;
+  padding-top: 80px;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 80% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
+}
+.hero-grid-lines {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image:
+    linear-gradient(var(--gold) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gold) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1300px; margin: 0 auto; padding: 0 5rem;
+  display: grid; grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem; align-items: center; width: 100%;
+}
+.hero-left { animation: fadeUp 1s ease both; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 2rem;
+  border: 1px solid var(--gold-border);
+  padding: 0.5rem 1.2rem;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '✦'; font-size: 0.5rem;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 5.5vw, 6rem);
+  font-weight: 300; line-height: 1.05;
+  color: var(--white); margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.hero-title .line-gold {
+  display: block;
+  font-style: italic;
+}
+.hero-tagline {
+  font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold-dim); margin-bottom: 1rem;
+  font-weight: 600;
+}
+.hero-sub {
+  font-size: 0.9rem; line-height: 1.9;
+  color: var(--white-muted); max-width: 480px;
+  margin-bottom: 3rem; font-weight: 300;
+}
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-gold {
+  background: var(--gold);
+  color: var(--black);
+  padding: 1rem 2.5rem; font-size: 0.72rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; font-weight: 700;
+  font-family: var(--font-body);
+  border: none; cursor: pointer;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.btn-gold:hover {
+  background: var(--gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201,168,76,0.35);
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--white);
+  padding: 1rem 2.5rem; font-size: 0.72rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer; transition: all 0.3s; display: inline-block;
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+.hero-stats {
+  display: flex; gap: 0; margin-top: 4rem;
+  border-top: 1px solid var(--gold-border);
+  padding-top: 2.5rem;
+}
+.hero-stat {
+  flex: 1; padding-right: 2rem;
+  border-right: 1px solid var(--gold-border);
+  margin-right: 2rem;
+}
+.hero-stat:last-child { border-right: none; margin-right: 0; }
+.stat-n {
+  font-family: var(--font-display); font-size: 2.8rem;
+  font-weight: 500; line-height: 1;
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stat-l { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--white-muted); margin-top: 0.4rem; }
+
+/* Hero right — logo showcase */
+.hero-right {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 2rem;
+  animation: scaleIn 1.2s ease both;
+  animation-delay: 0.3s;
+}
+.hero-logo-display {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-logo-ring {
+  position: absolute;
+  width: 420px; height: 420px;
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+  animation: rotateSlow 30s linear infinite;
+}
+.hero-logo-ring::before {
+  content: ''; position: absolute;
+  top: -4px; left: 50%; transform: translateX(-50%);
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold);
+}
+.hero-logo-ring2 {
+  position: absolute;
+  width: 360px; height: 360px;
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 50%;
+  animation: rotateSlow 20s linear infinite reverse;
+}
+.hero-logo-img {
+  width: 280px; height: auto;
+  position: relative; z-index: 2;
+  filter: drop-shadow(0 0 40px rgba(201,168,76,0.4))
+          drop-shadow(0 0 80px rgba(201,168,76,0.15));
+  animation: fadeIn 1.5s ease both;
+}
+.hero-badge-strip {
+  display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;
+}
+.badge-pill {
+  border: 1px solid var(--gold-border);
+  padding: 0.45rem 1rem; font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600;
+  background: var(--gold-glow);
+}
+
+/* ─── SECTION SHARED ─── */
+.section-wrap { padding: 7rem 0; }
+.section-wrap.dark { background: var(--black); }
+.section-wrap.darker { background: var(--black-rich); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5rem; }
+
+.section-header { text-align: center; margin-bottom: 5rem; }
+.section-tag {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.section-tag::before, .section-tag::after { content: '—'; opacity: 0.5; }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 300; color: var(--white);
+  line-height: 1.15; margin-bottom: 1rem;
+}
+.section-title em { font-style: italic; }
+.section-sub {
+  font-size: 0.88rem; line-height: 1.9;
+  color: var(--white-muted); max-width: 520px; margin: 0 auto;
+  font-weight: 300;
+}
+.gold-rule {
+  width: 60px; height: 1px; background: var(--gold);
+  margin: 1.5rem auto;
+}
+
+/* ─── DOCTOR SECTION ─── */
+#doctor { background: var(--black-rich); }
+.doctor-layout {
+  display: grid; grid-template-columns: 1fr 1.15fr;
+  gap: 6rem; align-items: center;
+}
+.doctor-frame {
+  position: relative;
+}
+.doctor-portrait {
+  width: 100%; aspect-ratio: 3/4;
+  background: var(--black-card);
+  border: 1px solid var(--gold-border);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.doctor-portrait::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(201,168,76,0.06) 0%, transparent 60%);
+}
+.portrait-svg-icon {
+  opacity: 0.12; position: relative; z-index: 1;
+}
+.doctor-portrait-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.98), rgba(10,10,10,0.7), transparent);
+  padding: 2.5rem 2rem 1.5rem;
+}
+.doc-label-name {
+  font-family: var(--font-display); font-size: 1.5rem;
+  font-weight: 400; color: var(--white); margin-bottom: 0.3rem;
+}
+.doc-label-title { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+
+.doc-corner { position: absolute; width: 30px; height: 30px; }
+.doc-corner.tl { top: 12px; left: 12px; border-top: 1px solid var(--gold); border-left: 1px solid var(--gold); }
+.doc-corner.tr { top: 12px; right: 12px; border-top: 1px solid var(--gold); border-right: 1px solid var(--gold); }
+.doc-corner.bl { bottom: 12px; left: 12px; border-bottom: 1px solid var(--gold); border-left: 1px solid var(--gold); }
+.doc-corner.br { bottom: 12px; right: 12px; border-bottom: 1px solid var(--gold); border-right: 1px solid var(--gold); }
+
+.doctor-content {}
+.doc-tag {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem; font-weight: 600;
+}
+.doc-tag::before { content: '✦'; font-size: 0.5rem; }
+.doc-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 300; line-height: 1.1;
+  color: var(--white); margin-bottom: 0.5rem;
+}
+.doc-degrees {
+  font-size: 0.68rem; letter-spacing: 0.12em;
+  color: var(--gold); margin-bottom: 1.5rem; font-weight: 500;
+}
+.doc-bio {
+  font-size: 0.87rem; line-height: 1.95;
+  color: var(--white-muted); margin-bottom: 2.5rem; font-weight: 300;
+}
+.doc-creds { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; }
+.cred-row {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--black-card);
+  border-left: 2px solid var(--gold);
+  border: 1px solid var(--white-faint);
+  border-left: 2px solid var(--gold);
+}
+.cred-star { color: var(--gold); font-size: 0.7rem; margin-top: 0.15rem; flex-shrink: 0; }
+.cred-info strong {
+  display: block; font-size: 0.82rem; font-weight: 600;
+  color: var(--white); margin-bottom: 0.2rem; letter-spacing: 0.02em;
+}
+.cred-info span { font-size: 0.74rem; color: var(--white-muted); font-weight: 300; }
+
+/* ─── RESULTS SECTION ─── */
+#results { background: var(--black); }
+.results-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--gold-border);
+  border: 1px solid var(--gold-border);
+  margin-bottom: 2px;
+}
+.result-card {
+  background: var(--black-card);
+  aspect-ratio: 3/4; position: relative; overflow: hidden;
+  cursor: pointer; transition: all 0.4s;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.result-card:hover .result-hover { opacity: 1; }
+.result-card:hover .result-num { opacity: 0.05; }
+
+.result-num {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  font-family: var(--font-display); font-size: 5rem;
+  font-weight: 300; color: var(--gold); opacity: 0.08;
+  line-height: 1; transition: opacity 0.4s;
+}
+.result-icon {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.result-icon svg { opacity: 0.07; }
+
+.result-hover {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(201,168,76,0.12), transparent);
+  border: 1px solid var(--gold-border);
+  opacity: 0; transition: opacity 0.4s;
+  display: flex; align-items: center; justify-content: center;
+}
+.result-view-btn {
+  font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); border: 1px solid var(--gold);
+  padding: 0.6rem 1.4rem; font-weight: 600;
+}
+
+.result-info {
+  position: relative; z-index: 2; padding: 1.5rem;
+  background: linear-gradient(to top, var(--black-card) 60%, transparent);
+}
+.result-tag { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; font-weight: 600; }
+.result-name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; color: var(--white); }
+
+/* Testimonial */
+.testimonial-bar {
+  background: var(--black-card);
+  border: 1px solid var(--gold-border);
+  padding: 3rem 4rem;
+  display: flex; align-items: center; gap: 4rem; margin-top: 1px;
+}
+.quote-mark {
+  font-family: var(--font-display); font-size: 5rem;
+  color: var(--gold); line-height: 0.5; opacity: 0.4;
+  flex-shrink: 0; align-self: flex-start; margin-top: 0.5rem;
+}
+.testimonial-text {
+  font-family: var(--font-display); font-size: 1.4rem;
+  font-weight: 300; line-height: 1.6; color: var(--white-dim);
+  font-style: italic; flex: 1;
+}
+.testimonial-by { min-width: 140px; text-align: right; }
+.t-name { font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
+.t-detail { font-size: 0.7rem; color: var(--white-muted); margin-bottom: 0.5rem; }
+.t-stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; }
+
+/* ─── TREATMENTS ─── */
+#treatments { background: var(--black-rich); }
+.treat-tabs {
+  display: flex; gap: 0; margin-bottom: 0;
+  border-bottom: 1px solid var(--gold-border);
+}
+.ttab {
+  padding: 1rem 2.2rem; font-size: 0.68rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  cursor: pointer; border-bottom: 2px solid transparent;
+  margin-bottom: -1px; transition: all 0.25s;
+  color: var(--white-muted); background: none;
+  border-top: none; border-left: none; border-right: none;
+  font-family: var(--font-body); font-weight: 500;
+}
+.ttab:hover { color: var(--white); }
+.ttab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.treat-panel { display: none; }
+.treat-panel.active {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--gold-border);
+  border: 1px solid var(--gold-border); border-top: none;
+  margin-bottom: 0;
+}
+.treat-card {
+  background: var(--black-card); padding: 2.5rem 2rem;
+  position: relative; overflow: hidden; cursor: pointer;
+  transition: background 0.3s;
+}
+.treat-card:hover { background: var(--black-soft); }
+.treat-card:hover .tc-num { opacity: 0.15; }
+.treat-card:hover::after {
+  transform: scaleX(1);
+}
+.treat-card::after {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-bright));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s;
+}
+.tc-num {
+  font-family: var(--font-display); font-size: 4rem;
+  font-weight: 300; color: var(--gold); opacity: 0.06;
+  line-height: 1; margin-bottom: 1rem; transition: opacity 0.3s;
+}
+.tc-name {
+  font-family: var(--font-display); font-size: 1.3rem;
+  font-weight: 400; color: var(--white); margin-bottom: 0.75rem;
+}
+.tc-desc {
+  font-size: 0.78rem; line-height: 1.9; color: var(--white-muted);
+  margin-bottom: 1.5rem; font-weight: 300;
+}
+.tc-meta { display: flex; gap: 1.5rem; }
+.tc-m strong {
+  display: block; font-size: 0.78rem; font-weight: 600;
+  color: var(--gold); margin-bottom: 0.2rem;
+}
+.tc-m span { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white-muted); }
+
+/* ─── BOOKING ─── */
+#booking { background: var(--black); }
+.booking-layout {
+  display: grid; grid-template-columns: 1fr 1.1fr;
+  gap: 6rem; align-items: start;
+}
+.booking-left .section-title { text-align: left; }
+.booking-left .section-tag { justify-content: flex-start; }
+.booking-left .section-tag::before { display: none; }
+.booking-points { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+.booking-point {
+  display: flex; align-items: center; gap: 1rem;
+  font-size: 0.82rem; color: var(--white-muted); font-weight: 300;
+}
+.bp-icon { color: var(--gold); font-size: 0.65rem; flex-shrink: 0; }
+
+.booking-form { display: flex; flex-direction: column; gap: 1.25rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.fg { display: flex; flex-direction: column; gap: 0.5rem; }
+.fl {
+  font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600;
+}
+.fi, .fsel {
+  background: var(--black-card);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--gold-border);
+  color: var(--white);
+  padding: 0.9rem 1.1rem; font-family: var(--font-body);
+  font-size: 0.85rem; outline: none; transition: border-color 0.25s;
+  appearance: none;
+}
+.fi:focus, .fsel:focus { border-color: var(--gold); border-bottom-color: var(--gold); }
+.fi::placeholder { color: rgba(255,255,255,0.2); }
+.fsel option { background: var(--black); }
+
+/* ─── CHATBOT ─── */
+.chat-bubble {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 2000;
+}
+.chat-fab {
+  width: 62px; height: 62px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(201,168,76,0.4), 0 0 0 0 rgba(201,168,76,0.3);
+  transition: all 0.3s;
+  border: none; font-size: 1.5rem;
+  animation: fabPulse 3s ease infinite;
+}
+@keyframes fabPulse {
+  0%, 100% { box-shadow: 0 8px 32px rgba(201,168,76,0.4), 0 0 0 0 rgba(201,168,76,0.3); }
+  50% { box-shadow: 0 8px 32px rgba(201,168,76,0.5), 0 0 0 10px rgba(201,168,76,0); }
+}
+.chat-fab:hover { background: var(--gold-bright); transform: scale(1.06); }
+.chat-notif {
+  position: absolute; top: -3px; right: -3px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #E53935; color: white;
+  font-size: 0.6rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--black);
+  }
+
+  .chat-win {
+    position: fixed; bottom: 5.5rem; right: 2rem; z-index: 2000;
+    width: 370px;
+    background: var(--black-rich);
+    border: 1px solid var(--gold-border);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8), 0 0 0 1px rgba(201,168,76,0.1);
+    display: none; flex-direction: column;
+    animation: chatUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.chat-win.open { display: flex; }
+@keyframes chatUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.chat-head {
+  background: var(--black-card);
+  border-bottom: 1px solid var(--gold-border);
+  padding: 1.25rem 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.chat-av {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1.1rem; color: var(--gold);
+  flex-shrink: 0;
+}
+.chat-head-text { flex: 1; }
+.chat-head-name { font-size: 0.88rem; font-weight: 600; color: var(--white); }
+.chat-head-status { font-size: 0.68rem; color: var(--gold); display: flex; align-items: center; gap: 0.4rem; margin-top: 0.15rem; }
+.s-dot { width: 5px; height: 5px; border-radius: 50%; background: #4CAF50; animation: pulse 2s ease infinite; }
+.chat-x { background: none; border: none; color: var(--white-muted); cursor: pointer; font-size: 1rem; transition: color 0.2s; }
+.chat-x:hover { color: var(--gold); }
+
+.chat-msgs {
+  flex: 1; overflow-y: auto; padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 1rem;
+  min-height: 260px; max-height: 320px;
+}
+.chat-msgs::-webkit-scrollbar { width: 3px; }
+.chat-msgs::-webkit-scrollbar-thumb { background: var(--gold-dim); }
+
+.cmsg { display: flex; gap: 0.65rem; align-items: flex-end; }
+.cmsg.u { flex-direction: row-reverse; }
+.cmsg-av {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem; color: var(--black); font-weight: 700;
+}
+.cmsg.u .cmsg-av { background: var(--black-card); border: 1px solid rgba(255,255,255,0.15); color: var(--white-muted); }
+.cmsg-bub {
+  max-width: 78%; padding: 0.75rem 1rem;
+  font-size: 0.82rem; line-height: 1.65;
+  background: var(--black-card); color: var(--white-dim);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px 12px 12px 2px; font-weight: 300;
+}
+.cmsg.u .cmsg-bub {
+  background: var(--gold); color: var(--black);
+  border-color: var(--gold); font-weight: 500;
+  border-radius: 12px 12px 2px 12px;
+}
+
+.chat-qr { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.5rem 1.5rem 1rem; }
+.cqr {
+  font-size: 0.65rem; padding: 0.4rem 0.9rem;
+  border: 1px solid var(--gold-border); background: none;
+  color: var(--gold); cursor: pointer; border-radius: 2px;
+  font-family: var(--font-body); font-weight: 600;
+  letter-spacing: 0.08em; transition: all 0.2s;
+  text-transform: uppercase; font-size: 0.6rem;
+}
+.cqr:hover { background: var(--gold); color: var(--black); }
+
+.chat-inp-row {
+  border-top: 1px solid var(--gold-border);
+  padding: 1rem 1.25rem; display: flex; gap: 0.75rem; align-items: center;
+}
+.chat-inp {
+  flex: 1; background: var(--black-card);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--white); padding: 0.65rem 1rem;
+  font-family: var(--font-body); font-size: 0.83rem;
+  outline: none; transition: border-color 0.2s; border-radius: 2px;
+}
+.chat-inp:focus { border-color: var(--gold); }
+.chat-inp::placeholder { color: rgba(255,255,255,0.2); }
+.chat-snd {
+  width: 36px; height: 36px;
+  background: var(--gold); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 2px; transition: background 0.2s; flex-shrink: 0;
+  color: var(--black); font-size: 0.85rem;
+}
+.chat-snd:hover { background: var(--gold-bright); }
+
+/* typing */
+.typing-row { display: flex; gap: 0.65rem; align-items: flex-end; }
+.typing-bub {
+  padding: 0.7rem 1rem;
+  background: var(--black-card);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px 12px 12px 2px;
+  display: flex; gap: 4px; align-items: center;
+}
+.td {
+  width: 5px; height: 5px; border-radius: 50%; background: var(--gold);
+  animation: typB 1.2s ease infinite;
+}
+.td:nth-child(2) { animation-delay: 0.2s; }
+.td:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typB {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.3; }
+  30% { transform: translateY(-5px); opacity: 1; }
+}
+
+/* ─── VALET PARKING ─── */
+#valet { background: var(--black); }
+.valet-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: center;
+}
+.valet-visual {
+  position: relative; display: flex; align-items: center; justify-content: center;
+}
+.valet-icon-wrap {
+  width: 320px; height: 320px;
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(201,168,76,0.06) 0%, transparent 70%);
+}
+.valet-icon-wrap::before {
+  content: '';
+  position: absolute; inset: -16px;
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 50%;
+  animation: rotateSlow 25s linear infinite;
+}
+.valet-icon-wrap::after {
+  content: '';
+  position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold);
+}
+.valet-car-svg { opacity: 0.9; }
+.valet-badge {
+  position: absolute; bottom: -1rem; right: -1rem;
+  background: var(--black-card);
+  border: 1px solid var(--gold-border);
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.valet-badge-num {
+  font-family: var(--font-display); font-size: 2rem;
+  font-weight: 300; color: var(--gold); line-height: 1;
+}
+.valet-badge-txt {
+  font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--white-muted); margin-top: 0.3rem;
+}
+.valet-features {
+  display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2.5rem;
+}
+.valet-feat {
+  display: flex; align-items: flex-start; gap: 1.25rem;
+  padding: 1.25rem;
+  background: var(--black-card);
+  border: 1px solid var(--white-faint);
+  border-left: 2px solid var(--gold);
+  transition: background 0.3s;
+}
+.valet-feat:hover { background: var(--black-soft); }
+.valet-feat-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  border: 1px solid var(--gold-border); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: var(--gold);
+}
+.valet-feat-info strong {
+  display: block; font-size: 0.85rem; font-weight: 600;
+  color: var(--white); margin-bottom: 0.25rem; letter-spacing: 0.02em;
+}
+.valet-feat-info span {
+  font-size: 0.76rem; color: var(--white-muted); font-weight: 300; line-height: 1.7;
+}
+.valet-cta-row {
+  display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+  .valet-layout { grid-template-columns: 1fr; gap: 4rem; }
+  .valet-visual { justify-content: center; }
+}
+@media (max-width: 576px) {
+  .valet-icon-wrap { width: 240px; height: 240px; }
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--black-rich);
+  border-top: 1px solid var(--gold-border);
+  padding: 5rem 0 2.5rem;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 4rem; margin-bottom: 4rem;
+}
+.footer-logo { height: 56px; width: auto; margin-bottom: 1.5rem; display: block;
+  filter: drop-shadow(0 0 10px rgba(201,168,76,0.3)); }
+.footer-desc { font-size: 0.8rem; line-height: 1.9; color: var(--white-muted); margin-bottom: 1.5rem; font-weight: 300; max-width: 240px; }
+.footer-contact { font-size: 0.78rem; color: rgba(255,255,255,0.35); line-height: 2; font-weight: 300; }
+.footer-col-title {
+  font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem; font-weight: 600;
+}
+.footer-links { display: flex; flex-direction: column; gap: 0.7rem; list-style: none; }
+.footer-links a {
+  text-decoration: none; font-size: 0.8rem;
+  color: rgba(255,255,255,0.4); transition: color 0.2s; font-weight: 300;
+}
+.footer-links a:hover { color: var(--gold-light); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.72rem; color: rgba(255,255,255,0.2); font-weight: 300;
+}
+
+/* ─── SCROLL REVEAL ─── */
+.rv {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.rv.vis { opacity: 1; transform: translateY(0); }
+.rv-d1 { transition-delay: 0.15s; }
+.rv-d2 { transition-delay: 0.3s; }
+.rv-d3 { transition-delay: 0.45s; }
+/* ─────────────────────────────────────────
+   RESPONSIVE DESIGN SYSTEM
+───────────────────────────────────────── */
+
+/* Large Laptop */
+@media (max-width: 1440px) {
+  nav,
+  .hero-content,
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .hero-logo-ring {
+    width: 360px;
+    height: 360px;
+  }
+
+  .hero-logo-ring2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-logo-img {
+    width: 240px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+
+  nav,
+  .hero-content,
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .hero-content,
+  .doctor-layout,
+  .booking-layout {
+    gap: 3rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .testimonial-bar {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .treat-panel.active {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-logo-ring {
+    width: 320px;
+    height: 320px;
+  }
+
+  .hero-logo-ring2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-logo-img {
+    width: 220px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  nav {
+    padding: 0 1.5rem;
+    height: 74px;
+  }
+
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-links a {
+    padding: 0 0.8rem;
+    font-size: 0.62rem;
+  }
+
+  #hero {
+    padding-top: 74px;
+  }
+
+  .hero-content,
+  .doctor-layout,
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    text-align: center;
+    gap: 5rem;
+  }
+
+  .hero-left {
+    order: 2;
+  }
+
+  .hero-right {
+    order: 1;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns,
+  .hero-badge-strip {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .hero-stat {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+    min-width: 180px;
+  }
+
+  .doctor-layout {
+    gap: 4rem;
+  }
+
+  .testimonial-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-by {
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chat-win {
+    width: 340px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+
+  nav {
+    height: auto;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.58rem;
+  }
+
+  #hero {
+    padding-top: 130px;
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
+
+  .hero-content,
+  .container {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .hero-sub {
+    font-size: 0.82rem;
+    line-height: 1.8;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-gold,
+  .btn-ghost {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-logo-ring {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-logo-ring2 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-logo-img {
+    width: 180px;
+  }
+
+  .results-grid,
+  .treat-panel.active {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section-wrap {
+    padding: 5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .doctor-content,
+  .booking-left {
+    text-align: center;
+  }
+
+  .booking-left .section-title {
+    text-align: center;
+  }
+
+  .booking-left .section-tag {
+    justify-content: center;
+  }
+
+  .booking-points {
+    align-items: center;
+  }
+
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+
+  .quote-mark {
+    font-size: 4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .chat-win {
+    width: calc(100vw - 24px);
+    right: 12px;
+    bottom: 5rem;
+  }
+
+  .chat-bubble {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  .hero-eyebrow,
+  .section-tag,
+  .doc-tag {
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .hero-tagline {
+    font-size: 0.62rem;
+  }
+
+  .hero-sub {
+    font-size: 0.78rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stat-n {
+    font-size: 2.2rem;
+  }
+
+  .hero-logo-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-logo-ring2 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-logo-img {
+    width: 150px;
+  }
+
+  .doctor-portrait-label {
+    padding: 2rem 1.2rem 1.2rem;
+  }
+
+  .doc-name {
+    font-size: 2rem;
+  }
+
+  .doc-bio,
+  .tc-desc,
+  .footer-desc {
+    font-size: 0.78rem;
+  }
+
+  .cred-row {
+    padding: 0.9rem;
+  }
+
+  .testimonial-bar {
+    padding: 1.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .treat-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .treat-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ttab {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 1rem 1.2rem;
+  }
+
+  .chat-msgs {
+    min-height: 220px;
+  }
+
+  .chat-fab {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+
+  .hero-content,
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .btn-gold,
+  .btn-ghost {
+    padding: 0.9rem 1rem;
+    font-size: 0.62rem;
+  }
+
+  .hero-logo-ring {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hero-logo-ring2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-logo-img {
+    width: 125px;
+  }
+
+  .chat-win {
+    width: calc(100vw - 16px);
+    right: 8px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg class="nav-logo-img" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="height:52px;width:auto;">
+      <!-- Black background fill -->
+      <circle cx="150" cy="150" r="148" fill="#0A0A0A"/>
+      <!-- Outer border ring in gold -->
+      <circle cx="150" cy="150" r="145" fill="none" stroke="#C9A84C" stroke-width="4"/>
+      <!-- Segmented outer ring: thick gold arcs with black gaps -->
+      <path d="M 30 100 A 145 145 0 0 1 150 5"   fill="none" stroke="#C9A84C" stroke-width="16"/>
+      <path d="M 150 5 A 145 145 0 0 1 270 100"  fill="none" stroke="#0A0A0A" stroke-width="20"/>
+      <path d="M 270 100 A 145 145 0 0 1 280 200" fill="none" stroke="#C9A84C" stroke-width="16"/>
+      <path d="M 280 200 A 145 145 0 0 1 150 295" fill="none" stroke="#0A0A0A" stroke-width="20"/>
+      <path d="M 150 295 A 145 145 0 0 1 20 200"  fill="none" stroke="#C9A84C" stroke-width="16"/>
+      <path d="M 20 200 A 145 145 0 0 1 30 100"   fill="none" stroke="#0A0A0A" stroke-width="20"/>
+      <!-- Inner ring gold -->
+      <circle cx="150" cy="150" r="118" fill="none" stroke="#C9A84C" stroke-width="8"/>
+      <!-- N letter in gold -->
+      <path d="M 72 210 L 72 95 L 148 195 L 148 95" fill="none" stroke="#C9A84C" stroke-width="24" stroke-linecap="square" stroke-linejoin="miter"/>
+      <!-- S letter in gold -->
+      <path d="M 228 108 C 228 108 192 88 162 108 C 132 128 165 150 195 162 C 225 174 230 195 200 212 C 170 229 140 218 140 218" fill="none" stroke="#C9A84C" stroke-width="22" stroke-linecap="round"/>
+      <!-- Arc text gold -->
+      <path id="nav-arc" d="M 48 210 A 115 115 0 0 0 252 210" fill="none"/>
+      <text font-family="Montserrat,sans-serif" font-size="17" font-weight="700" fill="#C9A84C" letter-spacing="3">
+        <textPath href="#nav-arc" startOffset="5%">REDEFINE YOUR CONFIDENCE</textPath>
+      </text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#doctor">Our Doctors</a></li>
+    <li><a href="#treatments">Treatments</a></li>
+    <li><a href="#results">Results</a></li>
+    <!-- <li><a href="#valet">Valet Parking</a></li> -->
+    <li><a href="#booking" class="nav-book">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Doctor-Led, Elite Cosmetic Clinics</div>
+      <div class="hero-tagline">Nila Skin, Hair and Cosmetic Clinic · Chennai</div>
+      <h1 class="hero-title">
+        Where Science<br>Meets <span class="line-gold gold-text">Elite Beauty</span>
+      </h1>
+      <p class="hero-sub">
+        Advanced skin and hair care delivered by board-certified doctors. Clinically proven treatments, personalised protocols, exceptional results — every time.
+      </p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-gold">Book Consultation</a>
+        <a href="#treatments" class="btn-ghost">Explore Treatments</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="stat-n">15+</div>
+          <div class="stat-l">Years of Excellence</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-n">12K+</div>
+          <div class="stat-l">Patients Treated</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-n">50+</div>
+          <div class="stat-l">Treatment Modalities</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-logo-display">
+        <div class="hero-logo-ring"></div>
+        <div class="hero-logo-ring2"></div>
+        <svg class="hero-logo-img" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <!-- Black background fill -->
+          <circle cx="150" cy="150" r="148" fill="#0A0A0A"/>
+          <!-- Outer border ring in gold -->
+          <circle cx="150" cy="150" r="145" fill="none" stroke="#C9A84C" stroke-width="4"/>
+          <!-- Segmented outer ring -->
+          <path d="M 30 100 A 145 145 0 0 1 150 5"   fill="none" stroke="#C9A84C" stroke-width="16"/>
+          <path d="M 150 5 A 145 145 0 0 1 270 100"  fill="none" stroke="#0A0A0A" stroke-width="20"/>
+          <path d="M 270 100 A 145 145 0 0 1 280 200" fill="none" stroke="#C9A84C" stroke-width="16"/>
+          <path d="M 280 200 A 145 145 0 0 1 150 295" fill="none" stroke="#0A0A0A" stroke-width="20"/>
+          <path d="M 150 295 A 145 145 0 0 1 20 200"  fill="none" stroke="#C9A84C" stroke-width="16"/>
+          <path d="M 20 200 A 145 145 0 0 1 30 100"   fill="none" stroke="#0A0A0A" stroke-width="20"/>
+          <!-- Inner ring gold -->
+          <circle cx="150" cy="150" r="118" fill="none" stroke="#C9A84C" stroke-width="8"/>
+          <!-- N letter in gold -->
+          <path d="M 72 210 L 72 95 L 148 195 L 148 95" fill="none" stroke="#C9A84C" stroke-width="24" stroke-linecap="square" stroke-linejoin="miter"/>
+          <!-- S letter in gold -->
+          <path d="M 228 108 C 228 108 192 88 162 108 C 132 128 165 150 195 162 C 225 174 230 195 200 212 C 170 229 140 218 140 218" fill="none" stroke="#C9A84C" stroke-width="22" stroke-linecap="round"/>
+          <!-- Arc text gold -->
+          <path id="hero-arc" d="M 48 210 A 115 115 0 0 0 252 210" fill="none"/>
+          <text font-family="Montserrat,sans-serif" font-size="17" font-weight="700" fill="#C9A84C" letter-spacing="3">
+            <textPath href="#hero-arc" startOffset="5%">REDEFINE YOUR CONFIDENCE</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="hero-badge-strip">
+        <div class="badge-pill">Doctor-Led</div>
+        <div class="badge-pill">FDA Approved</div>
+        <div class="badge-pill">ISO Certified</div>
+        <div class="badge-pill">Elite Care</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DOCTOR SECTION ═══ -->
+<section id="doctor" class="section-wrap darker">
+  <div class="container">
+    <div class="section-header rv">
+      <div class="section-tag">Doctor-Led Excellence</div>
+      <h2 class="section-title">Meet Your <em class="gold-text">Expert Doctors</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub">Our specialists bring international training and proven expertise to deliver results that redefine aesthetic medicine in Chennai.</p>
+    </div>
+
+    <div class="doctor-layout">
+      <div class="doctor-frame rv">
+        <div class="doctor-portrait">
+          <div class="doc-corner tl"></div>
+          <div class="doc-corner tr"></div>
+          <div class="doc-corner bl"></div>
+          <div class="doc-corner br"></div>
+          <div class="portrait-svg-icon">
+            <svg width="160" height="200" viewBox="0 0 160 200" fill="none">
+              <circle cx="80" cy="60" r="45" stroke="#C9A84C" stroke-width="1.5"/>
+              <path d="M15 190 C15 145, 40 125, 80 120 C120 125, 145 145, 145 190" stroke="#C9A84C" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="doctor-portrait-label">
+            <div class="doc-label-name">Dr. Shehalatha</div>
+            <div class="doc-label-title">Lead Dermatologist & Cosmetic Surgeon</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rv rv-d1">
+        <div class="doc-tag">Chief Medical Officer</div>
+        <h2 class="doc-name">Dr. Shehalatha</h2>
+        <div class="doc-degrees">MBBS · DDVL· 15 Years Experience</div>
+        <p class="doc-bio">
+          A pioneering figure in cosmetic dermatology with international training across the USA, UK, and South Korea. Dr. Aravind leads our team with a philosophy rooted in clinical precision, bespoke care, and outcome-focused treatment design — delivering transformations that honour each patient's unique identity.
+        </p>
+        <div class="doc-creds">
+          <div class="cred-row">
+            <div class="cred-star">✦</div>
+            <div class="cred-info">
+              <strong>MD Dermatology — JIPMER, Pondicherry</strong>
+              <span>Distinguished Graduate · Class of 2010</span>
+            </div>
+          </div>
+          <div class="cred-row">
+            <div class="cred-star">✦</div>
+            <div class="cred-info">
+              <strong>Fellowship — American Academy of Dermatology</strong>
+              <span>Advanced Laser & Aesthetic Procedures, Chicago</span>
+            </div>
+          </div>
+          <div class="cred-row">
+            <div class="cred-star">✦</div>
+            <div class="cred-info">
+              <strong>Certified Trichologist — IAT International</strong>
+              <span>Advanced Hair Restoration Protocols</span>
+            </div>
+          </div>
+          <div class="cred-row">
+            <div class="cred-star">✦</div>
+            <div class="cred-info">
+              <strong>Member — International Society of Dermatology</strong>
+              <span>Global expert network across 55 countries</span>
+            </div>
+          </div>
+        </div>
+        <a href="#booking" class="btn-gold">Schedule with Dr. Shehalatha</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESULTS SECTION ═══ -->
+<section id="results" class="section-wrap dark">
+  <div class="container">
+    <div class="section-header rv">
+      <div class="section-tag">Patient Transformations</div>
+      <h2 class="section-title">Real Results,<br><em class="gold-text">Real Confidence</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub">Every case is a testament to our doctor-led approach — clinically designed, precisely executed, beautifully delivered.</p>
+    </div>
+
+    <div class="results-grid rv rv-d1">
+      <div class="result-card">
+        <div class="result-num">01</div>
+        <div class="result-icon">
+          <svg width="140" height="180" viewBox="0 0 140 180" fill="none">
+            <path d="M70 20 C45 20, 20 45, 20 80 C20 130, 50 165, 70 165 C90 165, 120 130, 120 80 C120 45, 95 20, 70 20Z" stroke="#C9A84C" stroke-width="1.5"/>
+            <path d="M70 40 C55 40, 40 55, 40 80 C40 115, 57 140, 70 140 C83 140, 100 115, 100 80 C100 55, 85 40, 70 40Z" stroke="#C9A84C" stroke-width="0.7"/>
+          </svg>
+        </div>
+        <div class="result-hover">
+          <div class="result-view-btn">View Case →</div>
+        </div>
+        <div class="result-info">
+          <div class="result-tag">Skin Brightening</div>
+          <div class="result-name">Melasma & Pigmentation</div>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-num">02</div>
+        <div class="result-icon">
+          <svg width="140" height="160" viewBox="0 0 140 160" fill="none">
+            <circle cx="70" cy="70" r="50" stroke="#C9A84C" stroke-width="1.5"/>
+            <circle cx="70" cy="70" r="35" stroke="#C9A84C" stroke-width="0.7"/>
+            <circle cx="70" cy="70" r="15" stroke="#C9A84C" stroke-width="0.4"/>
+          </svg>
+        </div>
+        <div class="result-hover">
+          <div class="result-view-btn">View Case →</div>
+        </div>
+        <div class="result-info">
+          <div class="result-tag">Hair Restoration</div>
+          <div class="result-name">Androgenic Alopecia</div>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-num">03</div>
+        <div class="result-icon">
+          <svg width="130" height="160" viewBox="0 0 130 160" fill="none">
+            <rect x="15" y="15" width="100" height="130" stroke="#C9A84C" stroke-width="1.5"/>
+            <rect x="30" y="30" width="70" height="100" stroke="#C9A84C" stroke-width="0.7"/>
+            <rect x="45" y="45" width="40" height="70" stroke="#C9A84C" stroke-width="0.4"/>
+          </svg>
+        </div>
+        <div class="result-hover">
+          <div class="result-view-btn">View Case →</div>
+        </div>
+        <div class="result-info">
+          <div class="result-tag">Anti-Ageing</div>
+          <div class="result-name">Skin Rejuvenation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-bar rv rv-d2">
+      <div class="quote-mark">"</div>
+      <div class="testimonial-text">
+        After years of trying everything, Doctors Cosmetic Clinic gave me my confidence back. The doctor actually listened and the results surpassed every expectation I had.
+      </div>
+      <div class="testimonial-by">
+        <div class="t-name">Kavitha R.</div>
+        <div class="t-detail">Pigmentation Treatment</div>
+        <div class="t-stars">★ ★ ★ ★ ★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TREATMENTS ═══ -->
+<section id="treatments" class="section-wrap darker">
+  <div class="container">
+    <div class="section-header rv">
+      <div class="section-tag">Our Services</div>
+      <h2 class="section-title">Elite <em class="gold-text">Treatments</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub">Clinically advanced procedures across skin, hair, and laser — every protocol designed and supervised by our doctors.</p>
+    </div>
+
+    <div class="treat-tabs rv">
+      <button class="ttab active" onclick="switchTab('skin', this)">Skin Treatments</button>
+      <button class="ttab" onclick="switchTab('hair', this)">Hair Treatments</button>
+      <button class="ttab" onclick="switchTab('laser', this)">Laser & Technology</button>
+    </div>
+
+    <div id="tp-skin" class="treat-panel active rv rv-d1">
+      <div class="treat-card">
+        <div class="tc-num">01</div>
+        <div class="tc-name">HydraFacial MD</div>
+        <div class="tc-desc">Doctor-supervised multi-step cleanse, exfoliation, extraction, and serum infusion for an instant luminous complexion.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>45 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹4,500</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">02</div>
+        <div class="tc-name">Chemical Peels</div>
+        <div class="tc-desc">Medical-grade peels prescribed by our dermatologists targeting pigmentation, acne scars, and texture irregularities.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>30 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹3,000</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">03</div>
+        <div class="tc-name">Botox & Fillers</div>
+        <div class="tc-desc">Precision anti-ageing injectables for natural volume restoration and dynamic wrinkle relaxation — doctor-administered.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>20 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹8,000</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">04</div>
+        <div class="tc-name">Microneedling RF</div>
+        <div class="tc-desc">Fractional RF energy delivered to stimulate deep collagen remodelling and tighten skin laxity with minimal downtime.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>60 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹6,500</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">05</div>
+        <div class="tc-name">Acne Protocol</div>
+        <div class="tc-desc">Comprehensive doctor-designed acne management combining extractions, LED phototherapy, and targeted clinical topicals.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>45 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹2,500</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">06</div>
+        <div class="tc-name">Skin Brightening</div>
+        <div class="tc-desc">Advanced de-pigmentation protocols targeting melasma, sun spots, and uneven skin tone for a visibly luminous complexion.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>45 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹5,000</strong><span>From</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tp-hair" class="treat-panel">
+      <div class="treat-card">
+        <div class="tc-num">01</div>
+        <div class="tc-name">PRP Hair Therapy</div>
+        <div class="tc-desc">Platelet-rich plasma injections administered by our doctors to stimulate dormant follicles and promote robust regrowth.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>60 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹7,000</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">02</div>
+        <div class="tc-name">GFC Treatment</div>
+        <div class="tc-desc">Growth Factor Concentrate — next-generation autologous therapy with superior concentration for accelerated hair restoration.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>75 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹9,000</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">03</div>
+        <div class="tc-name">Hair Mesotherapy</div>
+        <div class="tc-desc">Customised cocktail of vitamins, minerals, and growth factors infused directly into the scalp by our trichologists.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>45 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹5,500</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">04</div>
+        <div class="tc-name">Scalp Trichoscopy</div>
+        <div class="tc-desc">Digital trichoscopy and complete scalp health assessment to precisely identify root causes of every hair concern.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>30 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹1,500</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">05</div>
+        <div class="tc-name">LLLT Hair Laser</div>
+        <div class="tc-desc">FDA-cleared Low-Level Laser Therapy delivering targeted photobiomodulation to energise follicle cells at a cellular level.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>30 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹3,500</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">06</div>
+        <div class="tc-name">Dandruff & Scalp</div>
+        <div class="tc-desc">Targeted treatments for seborrhoeic dermatitis, scalp psoriasis, and chronic dandruff — doctor-prescribed protocols.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>45 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹2,000</strong><span>From</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tp-laser" class="treat-panel">
+      <div class="treat-card">
+        <div class="tc-num">01</div>
+        <div class="tc-name">Q-Switch Nd:YAG</div>
+        <div class="tc-desc">Precision laser targeting pigmentation, tattoo removal, and skin tone correction with superior safety for Indian skin.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>30 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹5,000</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">02</div>
+        <div class="tc-name">CO₂ Fractional Laser</div>
+        <div class="tc-desc">Ablative fractional resurfacing for deep scars, wrinkles, and skin textural irregularities — precision doctor-administered.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>60 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹12,000</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">03</div>
+        <div class="tc-name">Laser Hair Removal</div>
+        <div class="tc-desc">Long-lasting hair reduction using diode and Nd:YAG lasers — safe and effective for all Indian skin phototypes (I–VI).</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>20–60 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹2,500</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">04</div>
+        <div class="tc-name">HIFU Skin Lift</div>
+        <div class="tc-desc">High-Intensity Focused Ultrasound for non-surgical lifting, tightening, and contour definition — zero downtime.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>90 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹15,000</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">05</div>
+        <div class="tc-name">LED Phototherapy</div>
+        <div class="tc-desc">Multi-wavelength LED panels for acne control, anti-inflammation, and collagen synthesis — prescribed by our doctors.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>30 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹2,000</strong><span>From</span></div>
+        </div>
+      </div>
+      <div class="treat-card">
+        <div class="tc-num">06</div>
+        <div class="tc-name">RF Skin Tightening</div>
+        <div class="tc-desc">Radiofrequency energy for skin laxity, jowl reduction, and body contouring — effective, non-invasive, no recovery time.</div>
+        <div class="tc-meta">
+          <div class="tc-m"><strong>60 min</strong><span>Duration</span></div>
+          <div class="tc-m"><strong>₹8,000</strong><span>From</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BOOKING ═══ -->
+<section id="booking" class="section-wrap dark">
+  <div class="container">
+    <div class="booking-layout">
+      <div class="booking-left rv">
+        <div class="section-tag">Book Your Visit</div>
+        <h2 class="section-title" style="text-align:left">Begin Your<br><em class="gold-text">Transformation</em></h2>
+        <div class="gold-rule" style="margin-left:0"></div>
+        <p class="section-sub" style="text-align:left; margin:0">Schedule a personal consultation with our expert doctors. We'll craft a bespoke treatment plan designed precisely for your skin and hair goals.</p>
+        <div class="booking-points">
+          <div class="booking-point"><span class="bp-icon">✦</span> Complimentary clinical skin analysis with every first visit</div>
+          <div class="booking-point"><span class="bp-icon">✦</span> Personalised treatment roadmap from consultation Day 1</div>
+          <div class="booking-point"><span class="bp-icon">✦</span> Doctor-led care — no technicians, no compromises</div>
+          <div class="booking-point"><span class="bp-icon">✦</span> Mon – Sat · 9AM – 7PM · Chennai</div>
+          <div class="booking-point"><span class="bp-icon">✦</span> +91 90000 00000 · info@nilaskincareclinic.in</div>
+        </div>
+      </div>
+
+      <div class="booking-form rv rv-d1">
+        <div class="form-row">
+          <div class="fg">
+            <label class="fl">First Name</label>
+            <input class="fi" type="text" placeholder="Aravind">
+          </div>
+          <div class="fg">
+            <label class="fl">Last Name</label>
+            <input class="fi" type="text" placeholder="Kumar">
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">Phone Number</label>
+          <input class="fi" type="tel" placeholder="+91 98765 43210">
+        </div>
+        <div class="fg">
+          <label class="fl">Email Address</label>
+          <input class="fi" type="email" placeholder="your@email.com">
+        </div>
+        <div class="fg">
+          <label class="fl">Primary Concern</label>
+          <select class="fsel">
+            <option value="">Select your concern</option>
+            <option>Acne & Breakouts</option>
+            <option>Pigmentation / Melasma</option>
+            <option>Hair Fall / Thinning</option>
+            <option>Anti-Ageing / Wrinkles</option>
+            <option>Laser Treatment</option>
+            <option>Dandruff / Scalp Issues</option>
+            <option>Body Contouring</option>
+            <option>General Consultation</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="fg">
+            <label class="fl">Preferred Date</label>
+            <input class="fi" type="date">
+          </div>
+          <div class="fg">
+            <label class="fl">Preferred Time</label>
+            <select class="fsel">
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>5:00 PM</option>
+              <option>6:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-gold" style="width:100%; padding: 1.1rem; font-size: 0.75rem; letter-spacing: 0.22em;">
+          CONFIRM APPOINTMENT ✦
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VALET PARKING ═══ -->
+<!-- <section id="valet" class="section-wrap dark">
+  <div class="container">
+    <div class="section-header rv">
+      <div class="section-tag">Exclusive Facility</div>
+      <h2 class="section-title">Complimentary <em class="gold-text">Valet Parking</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-sub">Arrive effortlessly. Our dedicated valet service ensures your visit begins and ends with the same luxury you experience inside our clinic.</p>
+    </div>
+
+    <div class="valet-layout">
+      <div class="valet-visual rv">
+        <div class="valet-icon-wrap">
+          <svg class="valet-car-svg" width="200" height="140" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+            <!-- Car body -->
+            <!-- <rect x="10" y="65" width="180" height="50" rx="8" stroke="#C9A84C" stroke-width="1.5"/> -->
+            <!-- Car roof -->
+            <!-- <path d="M50 65 C60 35, 140 35, 150 65" stroke="#C9A84C" stroke-width="1.5"/> -->
+            <!-- Windows -->
+            <!-- <path d="M58 63 C64 42, 96 40, 98 63" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
+            <path d="M102 63 C104 40, 136 42, 142 63" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/> -->
+            <!-- Wheels -->
+            <!-- <circle cx="50" cy="115" r="18" stroke="#C9A84C" stroke-width="1.5"/>
+            <circle cx="50" cy="115" r="9" stroke="#C9A84C" stroke-width="0.7"/>
+            <circle cx="150" cy="115" r="18" stroke="#C9A84C" stroke-width="1.5"/>
+            <circle cx="150" cy="115" r="9" stroke="#C9A84C" stroke-width="0.7"/> -->
+            <!-- Headlight -->
+            <!-- <rect x="12" y="75" width="18" height="10" rx="2" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/> -->
+            <!-- Taillight -->
+            <!-- <rect x="170" y="75" width="18" height="10" rx="2" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/> -->
+            <!-- Key icon above -->
+            <!-- <circle cx="100" cy="18" r="8" stroke="#C9A84C" stroke-width="1"/>
+            <line x1="100" y1="26" x2="100" y2="38" stroke="#C9A84C" stroke-width="1"/>
+            <line x1="100" y1="33" x2="105" y2="33" stroke="#C9A84C" stroke-width="1"/>
+            <line x1="100" y1="37" x2="104" y2="37" stroke="#C9A84C" stroke-width="1"/>
+          </svg>
+          <div class="valet-badge">
+            <div class="valet-badge-num">Free</div>
+            <div class="valet-badge-txt">Valet Service</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rv rv-d1">
+        <div class="doc-tag">White-Glove Arrival Experience</div>
+        <h3 class="doc-name" style="font-size:clamp(1.8rem,3vw,2.6rem)">Arrive in<br>Comfort & Style</h3>
+        <p class="doc-bio" style="margin-top:1rem">
+          At Doctors Cosmetic Clinic Chennai, your experience begins the moment you drive in. Our uniformed valet attendants are on hand to park your vehicle safely, so you can walk straight into your consultation — relaxed, on time, and ready.
+        </p>
+
+        <div class="valet-features">
+          <div class="valet-feat">
+            <div class="valet-feat-icon">🚗</div>
+            <div class="valet-feat-info">
+              <strong>Complimentary for All Patients</strong>
+              <span>Valet parking is provided free of charge for every patient and companion visiting our clinic.</span>
+            </div>
+          </div>
+          <div class="valet-feat">
+            <div class="valet-feat-icon">🔒</div>
+            <div class="valet-feat-info">
+              <strong>Secured & Monitored Parking</strong>
+              <span>Your vehicle is parked in a CCTV-monitored, secured facility by our trained valet professionals.</span>
+            </div>
+          </div>
+          <div class="valet-feat">
+            <div class="valet-feat-icon">⏱</div>
+            <div class="valet-feat-info">
+              <strong>Ready on Your Schedule</strong>
+              <span>Simply inform reception when you're finishing — your vehicle will be retrieved and waiting at the entrance.</span>
+            </div>
+          </div>
+          <div class="valet-feat">
+            <div class="valet-feat-icon">♿</div>
+            <div class="valet-feat-info">
+              <strong>Accessible Assistance Available</strong>
+              <span>Priority valet and assistance available for elderly patients and those with mobility requirements.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="valet-cta-row">
+          <a href="#booking" class="btn-gold">Book & Use Valet</a>
+          <a href="tel:+919000000000" class="btn-ghost">Call for Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <svg class="footer-logo" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <!-- Black background fill -->
+          <circle cx="150" cy="150" r="148" fill="#0A0A0A"/>
+          <!-- Outer border ring in gold -->
+          <circle cx="150" cy="150" r="145" fill="none" stroke="#C9A84C" stroke-width="4"/>
+          <!-- Segmented outer ring -->
+          <path d="M 30 100 A 145 145 0 0 1 150 5"   fill="none" stroke="#C9A84C" stroke-width="16"/>
+          <path d="M 150 5 A 145 145 0 0 1 270 100"  fill="none" stroke="#0A0A0A" stroke-width="20"/>
+          <path d="M 270 100 A 145 145 0 0 1 280 200" fill="none" stroke="#C9A84C" stroke-width="16"/>
+          <path d="M 280 200 A 145 145 0 0 1 150 295" fill="none" stroke="#0A0A0A" stroke-width="20"/>
+          <path d="M 150 295 A 145 145 0 0 1 20 200"  fill="none" stroke="#C9A84C" stroke-width="16"/>
+          <path d="M 20 200 A 145 145 0 0 1 30 100"   fill="none" stroke="#0A0A0A" stroke-width="20"/>
+          <!-- Inner ring gold -->
+          <circle cx="150" cy="150" r="118" fill="none" stroke="#C9A84C" stroke-width="8"/>
+          <!-- N letter in gold -->
+          <path d="M 72 210 L 72 95 L 148 195 L 148 95" fill="none" stroke="#C9A84C" stroke-width="24" stroke-linecap="square" stroke-linejoin="miter"/>
+          <!-- S letter in gold -->
+          <path d="M 228 108 C 228 108 192 88 162 108 C 132 128 165 150 195 162 C 225 174 230 195 200 212 C 170 229 140 218 140 218" fill="none" stroke="#C9A84C" stroke-width="22" stroke-linecap="round"/>
+          <!-- Arc text gold -->
+          <path id="footer-arc" d="M 48 210 A 115 115 0 0 0 252 210" fill="none"/>
+          <text font-family="Montserrat,sans-serif" font-size="17" font-weight="700" fill="#C9A84C" letter-spacing="3">
+            <textPath href="#footer-arc" startOffset="5%">REDEFINE YOUR CONFIDENCE</textPath>
+          </text>
+        </svg>
+        <p class="footer-desc">Chennai's elite doctor-led cosmetic clinic. Advanced skin and hair treatments, internationally trained specialists, uncompromising results.</p>
+        <div class="footer-contact">
+          📍 Chennai, Tamil Nadu<br>
+          📞 +91 90000 00000<br>
+          ✉ info@nilaskincareclinic.in
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Skin Treatments</div>
+        <ul class="footer-links">
+          <li><a href="#">HydraFacial MD</a></li>
+          <li><a href="#">Chemical Peels</a></li>
+          <li><a href="#">Botox & Fillers</a></li>
+          <li><a href="#">Microneedling RF</a></li>
+          <li><a href="#">Acne Protocol</a></li>
+          <li><a href="#">Skin Brightening</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Hair Treatments</div>
+        <ul class="footer-links">
+          <li><a href="#">PRP Hair Therapy</a></li>
+          <li><a href="#">GFC Treatment</a></li>
+          <li><a href="#">Hair Mesotherapy</a></li>
+          <li><a href="#">LLLT Hair Laser</a></li>
+          <li><a href="#">Scalp Trichoscopy</a></li>
+          <li><a href="#">Dandruff Protocol</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#">Our Doctors</a></li>
+          <li><a href="#">Laser & Tech</a></li>
+          <li><a href="#">Patient Results</a></li>
+          <!-- <li><a href="#valet">Valet Parking</a></li> -->
+          <li><a href="#">Book Appointment</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Nila skin, hair and Cosmetic Clinic Chennai. All rights reserved.</span>
+      <span>Doctor-Led · Elite Cosmetic Clinics · Chennai</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ CHATBOT ═══ -->
+<div class="chat-bubble">
+  <div class="chat-notif" id="chatNotif">1</div>
+  <button class="chat-fab" onclick="toggleChat()" title="Chat with us" aria-label="Open chat">💬</button>
+</div>
+
+<div class="chat-win" id="chatWin">
+  <div class="chat-head">
+    <div class="chat-av" style="font-size:0.65rem;font-weight:700;">NS</div>
+    <div class="chat-head-text">
+      <div class="chat-head-name">NS Assistant</div>
+      <div class="chat-head-status"><span class="s-dot"></span>Online · Instant replies</div>
+    </div>
+    <button class="chat-x" onclick="toggleChat()">✕</button>
+  </div>
+
+  <div class="chat-msgs" id="chatMsgs">
+    <div class="cmsg">
+      <div class="cmsg-av" style="font-size:0.5rem;font-weight:700;">NS</div>
+      <div class="cmsg-bub">Welcome to NS Clinic Chennai ✨ I'm here to help with treatment info, pricing, or booking. How can I assist you today?</div>
+    </div>
+  </div>
+
+  <div class="chat-qr" id="chatQR">
+    <button class="cqr" onclick="qAsk('What treatments do you offer?')">Treatments</button>
+    <button class="cqr" onclick="qAsk('What are your prices?')">Pricing</button>
+    <button class="cqr" onclick="qAsk('How do I book an appointment?')">Book</button>
+    <button class="cqr" onclick="qAsk('Tell me about hair loss treatment')">Hair Loss</button>
+    <button class="cqr" onclick="qAsk('Do you have parking facilities?')">Parking</button>
+    <button class="cqr" onclick="qAsk('Where are you located?')">Location</button>
+  </div>
+
+  <div class="chat-inp-row">
+    <input class="chat-inp" id="chatInp" type="text" placeholder="Ask us anything…" onkeydown="handleChatKey(event)">
+    <button class="chat-snd" onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<script>
+  // ─── TAB SWITCH ───
+function switchTab(name, btn) {
+  document.querySelectorAll('.treat-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.ttab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tp-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ─── SCROLL REVEAL ───
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+// ─── CHATBOT ───
+let chatIsOpen = false;
+
+function toggleChat() {
+  chatIsOpen = !chatIsOpen;
+  document.getElementById('chatWin').classList.toggle('open', chatIsOpen);
+  if (chatIsOpen) {
+    document.getElementById('chatNotif').style.display = 'none';
+    setTimeout(() => document.getElementById('chatInp').focus(), 300);
+  }
+}
+
+const KB = {
+  treatments: "We offer 3 categories of elite treatments:\n\n✦ Skin: HydraFacial MD, Chemical Peels, Botox & Fillers, Microneedling RF, Acne Protocol, Skin Brightening\n\n✦ Hair: PRP Therapy, GFC Treatment, Mesotherapy, LLLT, Scalp Trichoscopy\n\n✦ Laser & Tech: Q-Switch Nd:YAG, CO₂ Fractional, HIFU Lift, Laser Hair Removal, RF Tightening\n\nEvery treatment is doctor-supervised. Would you like details on any specific one?",
+  price: "Our pricing is transparent:\n\n• Consultation: from ₹500 (includes free skin analysis)\n• Acne Protocol: from ₹2,500\n• HydraFacial MD: from ₹4,500\n• PRP Hair Therapy: from ₹7,000\n• Botox & Fillers: from ₹8,000\n• HIFU Lift: from ₹15,000\n\nAll procedures are doctor-performed. Call +91 90000 00000 for a personalised quote.",
+  booking: "Booking is easy:\n\n1. Use the Booking Form on this page (scroll up)\n2. Call us: +91 90000 00000\n3. Email: info@doctorscosmeticclinic.in\n\nWe're open Mon–Sat, 9AM–7PM. Your first visit includes a complimentary skin analysis! ✨",
+  hair: "For hair concerns, our trichologists offer:\n\n✦ PRP Therapy — stimulates follicle regrowth\n✦ GFC Treatment — advanced growth factor therapy\n✦ Hair Mesotherapy — nutrient infusion\n✦ LLLT — FDA-cleared laser treatment\n✦ Scalp Trichoscopy — digital root cause analysis\n\nDr. Aravind personally designs every hair restoration plan. Shall I help you book a consultation?",
+  skin: "For skin, we offer:\n\n✦ Pigmentation & Melasma treatment\n✦ Acne & Scar management\n✦ Anti-ageing (Botox, Fillers, HIFU)\n✦ Brightening & Hydration protocols\n✦ Chemical Peels & Laser resurfacing\n\nEvery plan is doctor-designed and tailored to your skin type. ✨",
+  doctor: "Our lead specialist is Dr. Aravind Kumar — MBBS, MD Dermatology, DNB, 15+ years experience. He trained at JIPMER and holds a fellowship from the American Academy of Dermatology. He personally supervises all treatments at Doctors Cosmetic Clinic Chennai. 👨‍⚕️",
+  location: "We're located in Chennai, Tamil Nadu. Open Monday–Saturday, 9AM–7PM.\n\nContact us:\n📞 +91 90000 00000\n✉ info@doctorscosmeticclinic.in",
+  elite: "What makes us different is simple: every treatment at DCC is Doctor-Led. No technicians administering your procedures — only board-certified specialists. Elite care, proven results. ✦",
+  valet: "Yes! We offer complimentary valet parking for all patients at Doctors Cosmetic Clinic Chennai:\n\n🚗 Free for all patients & companions\n🔒 CCTV-monitored secured facility\n⏱ Vehicle retrieved at your convenience\n♿ Priority access for elderly & mobility-impaired patients\n\nSimply drive in, hand your keys to our uniformed valet, and walk straight into your consultation. No stress, no parking hassle. 😊",
+  fallback: ["Great question! For detailed personalised advice, please call us at +91 90000 00000 or email info@doctorscosmeticclinic.in.", "For the most accurate answer, our team is available Mon–Sat 9AM–7PM at +91 90000 00000. We're happy to help!", "That's best answered by our doctors directly. Book a consultation — your first visit includes a free skin analysis! Shall I help you set that up?"]
+};
+
+function getBotReply(msg) {
+  const m = msg.toLowerCase();
+  if (m.match(/valet|park|car|parking|drive|vehicle/)) return KB.valet;
+  if (m.match(/hi|hello|hey|namaste/)) return KB.greet[Math.random() > 0.5 ? 1 : 0];
+  if (m.match(/treat|offer|service|what do/)) return KB.treatments;
+  if (m.match(/pric|cost|fee|charg|how much|rate|₹/)) return KB.price;
+  if (m.match(/book|appoint|schedul|visit/)) return KB.booking;
+  if (m.match(/hair|alopecia|bald|thin|dandruff|scalp/)) return KB.hair;
+  if (m.match(/skin|acne|pigment|melasma|wrinkle|age|bright|glow|peel/)) return KB.skin;
+  if (m.match(/doctor|dr|specialist|who|aravind/)) return KB.doctor;
+  if (m.match(/where|locat|address|direction|chennai/)) return KB.location;
+  if (m.match(/elite|differ|unique|why|best|special/)) return KB.elite;
+  return KB.fallback[Math.floor(Math.random() * 3)];
+}
+
+function addChatMsg(text, isUser) {
+  const msgs = document.getElementById('chatMsgs');
+  const d = document.createElement('div');
+  d.className = 'cmsg' + (isUser ? ' u' : '');
+  d.innerHTML = `
+    <div class="cmsg-av">${isUser ? 'You' : 'NS'}</div>
+    <div class="cmsg-bub">${text.replace(/\n/g, '<br>')}</div>
+  `;
+  msgs.appendChild(d);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function showTyping() {
+  const msgs = document.getElementById('chatMsgs');
+  const d = document.createElement('div');
+  d.className = 'typing-row'; d.id = 'typRow';
+  d.innerHTML = `
+    <div class="cmsg-av" style="font-size:0.5rem;font-weight:700;">NS</div>
+    <div class="typing-bub">
+      <span class="td"></span><span class="td"></span><span class="td"></span>
+    </div>
+  `;
+  msgs.appendChild(d);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function removeTyping() {
+  const t = document.getElementById('typRow');
+  if (t) t.remove();
+}
+
+function sendChat() {
+  const inp = document.getElementById('chatInp');
+  const text = inp.value.trim();
+  if (!text) return;
+  inp.value = '';
+  document.getElementById('chatQR').style.display = 'none';
+  addChatMsg(text, true);
+  showTyping();
+  setTimeout(() => {
+    removeTyping();
+    addChatMsg(getBotReply(text), false);
+  }, 800 + Math.random() * 700);
+}
+
+function qAsk(text) {
+  document.getElementById('chatInp').value = text;
+  sendChat();
+}
+
+function handleChatKey(e) { if (e.key === 'Enter') sendChat(); }
+
+</script>
+</body>
+</html>
